@@ -1,0 +1,33 @@
+body {
+    background: #ffffff;
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#splash {
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+    margin: auto;
+    background: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#splash-right {
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    margin: 0px;
+}
+
+#splash-name {
+    font: 42px;
+    float: right;
+}
+
+#main {
+    display: none;
+}
