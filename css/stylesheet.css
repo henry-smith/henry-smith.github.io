@@ -3,31 +3,82 @@ body {
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#splash {
+#header.splash {
     position: absolute;
     width: 100%;
-    bottom: 50px;
-    margin: auto;
-    background: blue;
+    top: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#splash-right {
-    display: flex;
-    flex-direction: column;
+#menu.splash {
+    padding: 0px;
+    list-style-type: none;
 }
 
-h3 {
+#menu.splash li {
+    font-size: 2em;
     margin: 0px;
+    transition: text-shadow 200ms ease-in 0ms;
+    cursor: pointer;
 }
 
-#splash-name {
-    font: 42px;
-    float: right;
+#menu.splash *:hover {
+    text-shadow: 0 0 2px slategrey;
 }
 
-#main {
+#menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#name.splash {
+    font-size: 4em;
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 3px solid;
+}
+
+#header {
+    display: flex;
+    margin-top: 0px;
+    margin-left: 40px;
+    align-items: center;
+}
+
+#name {
+    font-size: 2em;
+    padding-right: 20px;
+    margin-right: 20px;
+}
+
+ul.main {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+ul.main li {
+    float: left;
+}
+
+ul.main li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tabcontent {
     display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
 }
