@@ -3,43 +3,6 @@ body {
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#header.splash {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#menu.splash {
-    padding: 0px;
-    list-style-type: none;
-}
-
-#menu.splash li {
-    font-size: 2em;
-    margin: 0px;
-    transition: text-shadow 200ms ease-in 0ms;
-    cursor: pointer;
-}
-
-#menu.splash *:hover {
-    text-shadow: 0 0 2px slategrey;
-}
-
-#menu a {
-    text-decoration: none;
-    color: inherit;
-}
-
-#name.splash {
-    font-size: 4em;
-    padding-right: 20px;
-    margin-right: 20px;
-    border-right: 3px solid;
-}
-
 #header {
     display: flex;
     margin-top: 0px;
@@ -49,36 +12,72 @@ body {
 
 #name {
     font-size: 2em;
-    padding-right: 20px;
-    margin-right: 20px;
+    margin: 20px;
 }
 
-ul.main {
+
+#menu {
+    display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
 }
 
-ul.main li {
-    float: left;
+#menu li {
+    border-bottom: 5px white solid;
+    padding: 20px 15px 15px 15px;
+    transition: 200ms border-bottom ease-in 0ms;
 }
 
-ul.main li a {
-    display: inline-block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
+#menu li:hover {
+    border-bottom: 5px lightgray solid;
+}
+
+#menu .active {
+    border-bottom: 5px gray solid;
+}
+
+#menu a {
     text-decoration: none;
-    transition: 0.3s;
-    font-size: 17px;
+    color: inherit;
 }
 
-.tabcontent {
+.content {
     display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
+    margin: 10px 0 10px 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+    max-width: 800px;
+}
+
+.text {
+    text-align: justify;
+}
+
+#me{
+    float:right; 
+    max-width: 300px;
+    border-radius: 100%; 
+    height: auto; 
+    margin: 40px;
+}
+
+#icon-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#icon-list li {
+    margin: 20px;
+}
+
+.icon {
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+#icon-list a {
+    text-decoration: none;
+    color: inherit;
 }

@@ -1,37 +1,30 @@
 window.onload = function () {
-  var header = document.getElementById('header');
-  header.className = "splash";
-  headerChildren = header.childNodes;
-  for (i = 0; i < headerChildren.length; i++) {
-    headerChildren[i].className = 'splash';
-  }
-
-  var tablinks = document.getElementsByClassName('tablinks');
-  for(i = 0; i < tablinks.length; i++) {
-    tablinks[i].addEventListener('onclick', openCity, false);
-  }
-
-  header.onclick = function () {
-    header.className = 'main';
-    for (i = 0; i < headerChildren.length; i++) {
-      headerChildren[i].className = 'main';
-    }
+  console.log(window.location.pathname);
+  var tabs = document.getElementsByClassName('tabs');
+  changeTab(tabs[0]);
+  for (i = 0; i < tabs.length; i++) {
+    (function () {
+      var tab = tabs[i];
+      tab.addEventListener('click', function () {
+        changeTab(tab);
+      }, false);
+    }());
   }
 
 
-  function changeTab(evt, newTab) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+  function changeTab(newTab) {
+    var i, content, tabs;
+    content = document.getElementsByClassName("content");
+    for (i = 0; i < content.length; i++) {
+      content[i].style.display = "none";
     }
 
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    tabs = document.getElementsByClassName("tabs");
+    for (i = 0; i < tabs.length; i++) {
+      tabs[i].className = tabs[i].className.replace(" active", "");
     }
-    console.log("here")
-    document.getElementById(newTab).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+    
+    document.getElementById(newTab.children[0].innerHTML).style.display = "block";
+    newTab.className += " active";
+  }
 }

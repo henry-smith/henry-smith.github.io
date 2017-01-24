@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/index.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>WIP</title>
@@ -12,18 +13,59 @@
     <div id="header">
         <p id="name">Henry Smith</p>
         <ul id="menu">
-            <li><a class="tablinks" href="#about">About</a></li>
-            <li><a class="tablinks" href="#contact">Contact</a></li>
-            <li><a class="link" href="assets/resume.pdf" target="_blank">Resume</a></li>
+            <li class="tabs"><a href="#about">about</a></li>
+            <li class="tabs"><a href="#project">projects</a></li>
+            <li class="tabs"><a href="#resume">resume</a></li>
+            <li class="tabs"><a href="#contact">contact</a></li>
         </ul>
     </div>
-    <div id="About" class="tabcontent">
+    <div id="about" class="content">
         <h3>About</h3>
-        <p>I r n enginer</p>
+        <img id="me" src="assets/me.jpg">
+        <div class="text">
+            <p>I r n enginer. I am writing something. Yes, I plan to make it the most boring thing ever written. I go to the
+                store. A car is parked. Many cars are parked or moving. Some are blue. Some are tan. They have windows. In
+                the store, there are items for sale. These include such things as soap, detergent, magazines, and lettuce.
+                You can enhance your life with these products. Soap can be used for bathing, be it in a bathtub or in a shower.
+                Apply the soap to your body and rinse. Detergent is used to wash clothes. Place your dirty clothes into a
+                washing machine and add some detergent as directed on the box. </p>
+            <p>I r n enginer. I am writing something. Yes, I plan to make it the most boring thing ever written. I go to the
+                store. A car is parked. Many cars are parked or moving. Some are blue. Some are tan. They have windows. In
+                the store, there are items for sale. These include such things as soap, detergent, magazines, and lettuce.
+                You can enhance your life with these products. Soap can be used for bathing, be it in a bathtub or in a shower.
+                Apply the soap to your body and rinse. Detergent is used to wash clothes. Place your dirty clothes into a
+                washing machine and add seople even eat lettuce by itself. I have not done this. So you can purchase many
+                types of things at stores.</p>
+            <p>I r n enginer. I am writing something. Yes, I plan to make it the most boring thing ever written. I go to the
+                store. A car is parked. Many cars are parked or moving. Some are blue. Some are tan. They have windows. In
+                the store, there are items for sale. These include such things as soap, detergent, magazines, and lettuce.
+                You can enhance your life with these products. Soap can be used for bathing, be it in a bathtub or in a shower.
+                Apply the soap to your body and rinse. Detergent is used to wash clothes. Place your dirty clothes into a
+                washing machine and add seople even eat lettuce by itself. I have not done this. So you can purchase many
+                types of things at stores.</p>
+        </div>
     </div>
-    <div id="Contact" class="tabcontent">
+    <div id="projects" class="content">
+        <h3>Projects</h3>
+        <div class="project">hello</div>
+    </div>
+    <div id="resume" class="content">
+        <h3>Resume</h3>
+        <p>Resume can be found <a class="link" href="assets/resume.pdf" target="_blank">here</a>!</p>
+    </div>
+    <div id="contact" class="content">
         <h3>Contact</h3>
-        <p>ur moms buttholl</p>
+        <ul id="icon-list">
+            <li>
+                <a class="link" href="mailto:henry.smith AT berkeley.edu" target="_top"><img class="icon" src="assets/email.png" style="width:25px;height:25px;">email</a>
+            </li>
+            <li>
+                <a class="link" href="https://www.linkedin.com/in/henry-smith-48912996/" target="_blank"><img class="icon" src="assets/linkedin.png" style="width:25px;height:25px;">linkedin</a>
+            </li>
+            <li>
+                <a class="link" href="https://github.com/henry-smith" target="_blank"><img class="icon" src="assets/github.png" style="width:25px;height:25px;">github</a>
+            </li>
+        </ul>
     </div>
 </body>
 
