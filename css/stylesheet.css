@@ -5,16 +5,15 @@ body {
 
 #header {
     display: flex;
-    margin-top: 0px;
-    margin-left: 40px;
+    margin: auto;
     align-items: center;
+    max-width: 800px;
 }
 
 #name {
     font-size: 2em;
     margin: 20px;
 }
-
 
 #menu {
     display: flex;
@@ -44,7 +43,8 @@ body {
 
 .content {
     display: none;
-    margin: 10px 0 10px 40px;
+    margin:auto;
+    padding-top: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 20px;
     max-width: 800px;
@@ -54,11 +54,11 @@ body {
     text-align: justify;
 }
 
-#me{
-    float:right; 
+#me {
+    float: right;
     max-width: 300px;
-    border-radius: 100%; 
-    height: auto; 
+    border-radius: 100%;
+    height: auto;
     margin: 40px;
 }
 
@@ -80,4 +80,72 @@ body {
 #icon-list a {
     text-decoration: none;
     color: inherit;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-block {
+    width: 375px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 1000ms box-shadow ease-in 0ms;
+    box-sizing: border-box;
+}
+
+.project-block img {
+    position: absolute;
+    opacity: .5;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    transition: 200ms opacity ease-in 0ms;
+}
+
+.project-block h1 {
+    position: relative;
+    font-size: 25px;
+    top: 60px;
+    opacity: .5;
+    margin-left: -10px;
+    padding: 20px;
+    transition: 150ms opacity ease-in 0ms;
+}
+
+.project-block:hover {
+    width: 375px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-block:hover img {
+    position: absolute;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+}
+
+.project-block:hover h1 {
+    opacity: .75;
+    width: 75%;
+    background-color: lightslategray;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+h3 {
+    text-align: center;
 }

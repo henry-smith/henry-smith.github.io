@@ -1,5 +1,5 @@
 window.onload = function () {
-  console.log(window.location.pathname);
+  var hash = window.location.hash.substring(1);  
   var tabs = document.getElementsByClassName('tabs');
   changeTab(tabs[0]);
   for (i = 0; i < tabs.length; i++) {
@@ -9,8 +9,11 @@ window.onload = function () {
         changeTab(tab);
       }, false);
     }());
-  }
 
+    if (tabs[i].children[0].innerHTML === hash) {
+      changeTab(tabs[i]);
+    }
+  }
 
   function changeTab(newTab) {
     var i, content, tabs;
@@ -23,7 +26,7 @@ window.onload = function () {
     for (i = 0; i < tabs.length; i++) {
       tabs[i].className = tabs[i].className.replace(" active", "");
     }
-    
+
     document.getElementById(newTab.children[0].innerHTML).style.display = "block";
     newTab.className += " active";
   }
